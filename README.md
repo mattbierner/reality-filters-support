@@ -6,7 +6,7 @@ This documentation covers the basics of using Reality Filters. If you run into a
 
 ## Drawing
 
-Reality Filters works best on devices that have a LiDAR sensor, such as the iPhone 12 Pro or iPad pro. However the app runs on all devices.
+Reality Filters works best on devices that have a LiDAR sensor, such as the iPhone 12 Pro or iPad Pro. However the app runs on all devices.
 
 For devices with a LiDAR sensor, you can start drawing immediately after you launch the app. Touch on the screen to apply the current filter to that part of the world.
 
@@ -41,6 +41,27 @@ Here's a list of the current filters:
 
 - `Hue shift` — Adjust the color of the painted part of the world.
 
+## Advanced Settings
+
+### Body Effects
+
+Users with an iPhone XR/XS or newer can configure how detected people in the scene are displayed. Possible settings:
+
+- `ignore` — Don't apply any special treatment to detected people.
+
+- `exclude` — Exclude detected people from all effects.
+
+- `FG` — Treat detected people as part of the foreground (the painted bits of the world). With the `Coloring book` filter for example, people would be rendered using the colored-in effect.
+
+- `BG` — Treat detected people as part of the background (the unpainted bits of the world). With the `Coloring book` filter for example, people would rendered using the pencil sketch effect. 
+
+### Foreground Occlusion
+
+(Note that foreground occlusion requires a device with a LiDAR sensor, such as the iPhone 12 Pro)
+
+Foreground occlusion uses depth data from the LiDAR sensor to avoid applying the effects to painted parts of the scene that appear behind objects in the foreground. This foreground object could be a person, your hand, or a wall. The result makes it look like the effects are better integrated into the real world instead of merely being on your screen.
+
+To enable foreground occlusion, tap the lightbulb icon and toggle "Foreground Occlusion". Keep in mind that the effect is not perfect and may cause artifacts, especially for complex scenes.
 
 ## Sharing
 
